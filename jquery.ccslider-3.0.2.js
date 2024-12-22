@@ -361,7 +361,8 @@ jQuery.extend(jQuery.easing, {
             var d = c / 4
         } else {
             var d = c / (2 * Math.PI) * Math.asin(a / n)
-        } if (m < 1) {
+        }
+        if (m < 1) {
             return -0.5 * (n * Math.pow(2, 10 * (m -= 1)) * Math.sin((m * b - d) * (2 * Math.PI) / c)) + p
         }
         return n * Math.pow(2, -10 * (m -= 1)) * Math.sin((m * b - d) * (2 * Math.PI) / c) * 0.5 + a + p
@@ -671,7 +672,8 @@ jQuery.extend(jQuery.easing, {
                     if (g[0].alt) {
                         j = g[0].alt
                     }
-                } if (j) {
+                }
+                if (j) {
                     H[0].innerHTML = j;
                     cZ = g.data("captionPosition");
                     cZ = cZ ? cZ : y.captionPosition;
@@ -810,7 +812,7 @@ jQuery.extend(jQuery.easing, {
                     g = ["cubeUp", "cubeDown", "cubeRight", "cubeLeft", "flipUp", "flipDown", "flipRight", "flipLeft", "blindsVertical", "blindsHorizontal", "gridBlocksUp", "gridBlocksDown", "gridBlocksLeft", "gridBlocksRight"]
                 }
             } else {
-                g = ["scaleFade","fade", "horizontalOverlap", "verticalOverlap", "horizontalSlide", "verticalSlide", "horizontalWipe", "verticalWipe", "horizontalSplit", "verticalSplit", "fadeSlide", "circle", "fadeZoom", "clock", "zoomInOut", "spinFade", "rotate"]
+                g = ["scaleFade", "fade", "horizontalOverlap", "verticalOverlap", "horizontalSlide", "verticalSlide", "horizontalWipe", "verticalWipe", "horizontalSplit", "verticalSplit", "fadeSlide", "circle", "fadeZoom", "clock", "zoomInOut", "spinFade", "rotate"]
             }
             bJ = g[Math.floor(Math.random() * (g.length + 1))];
             if (bJ === undefined) {
@@ -1264,7 +1266,8 @@ jQuery.extend(jQuery.easing, {
                                     r = h[0] * by
                                 } else {
                                     r = (ch - 1 - h[0]) * by
-                                } if (h[1] < cN) {
+                                }
+                                if (h[1] < cN) {
                                     r += h[1] * by
                                 } else {
                                     r += (ct - 1 - h[1]) * by
@@ -1482,7 +1485,8 @@ jQuery.extend(jQuery.easing, {
                     cI.height(g);
                     cE = h;
                     b7 = g
-                } if (cF) {
+                }
+                if (cF) {
                     bE.css({
                         left: -cE,
                         width: cE,
@@ -1588,9 +1592,9 @@ jQuery.extend(jQuery.easing, {
                 cO.css("z-index", "1");
                 g.css("z-index", "2");
                 switch (bJ) {
-					case "scaleFade":
-					
-					break;
+                    case "scaleFade":
+
+                        break;
                     case "fade":
                         k.css({
                             opacity: 0,
@@ -2127,21 +2131,21 @@ jQuery.extend(jQuery.easing, {
             fallBack: "fadeSlide",
             fallBackSpeed: 1200
         },
-        animSpeed: 1200,//指定每次切换幻灯片时的动画持续时间（毫秒）。这里设置为 1200 毫秒，即 1.2 秒。
-        startSlide: 0,//指定幻灯片从哪一张开始显示。索引从 0 开始，所以 0 表示第一张幻灯片。
-        directionNav: false,//启用或禁用方向导航（左右箭头）。true 表示启用，用户可以通过点击箭头来手动切换幻灯片。
-        controlLinks: false,//启用或禁用控制链接（通常是底部的小圆点或其他形式的缩略图），用于快速跳转到特定幻灯片。
-        controlLinkThumbs: false,//如果启用了 controlLinks，此选项决定是否显示缩略图作为控制链接。false 表示不显示缩略图。
-        controlThumbLocation: "",//如果启用了缩略图控制链接，此选项指定缩略图的位置。空字符串表示默认位置。如果你需要自定义缩略图的位置，可以在这里提供一个 CSS 类名或选择器。
-        autoPlay: false,//启用或禁用自动播放功能。true 表示启用，幻灯片会自动切换。
-        pauseTime: 8000,//设置自动播放时两张幻灯片之间的暂停时间（毫秒）。这里设置为 5000 毫秒，即 5 秒。
-        pauseOnHover: false,//当鼠标悬停在幻灯片上时，是否暂停自动播放。true 表示启用此功能。
-        captions: false,//启用或禁用幻灯片标题（字幕）。true 表示启用，幻灯片中的图片可以包含标题文本。
-        captionPosition: "bottom",//设置标题的位置。"bottom" 表示标题位于幻灯片的底部。其他可能的值包括 "top"、"left"、"right" 等。
-        captionAnimation: "slide",//设置标题的动画效果。"slide" 表示标题将以滑动的方式出现。其他可能的值包括 "fade"（淡入）等。
-        captionAnimationSpeed: 600,//设置标题动画的持续时间（毫秒）。这里设置为 600 毫秒，即 0.6 秒。
-        beforeSlideChange: function(a) {},//定义在幻灯片切换前触发的回调函数。你可以在这个函数中执行一些自定义逻辑，比如加载数据或更新 UI。
-        afterSlideChange: function(a) {}//定义在幻灯片切换后触发的回调函数。同样可以用于执行自定义逻辑，比如更新状态或记录日志。
+        animSpeed: 1200, //指定每次切换幻灯片时的动画持续时间（毫秒）。这里设置为 1200 毫秒，即 1.2 秒。
+        startSlide: 0, //指定幻灯片从哪一张开始显示。索引从 0 开始，所以 0 表示第一张幻灯片。
+        directionNav: false, //启用或禁用方向导航（左右箭头）。true 表示启用，用户可以通过点击箭头来手动切换幻灯片。
+        controlLinks: false, //启用或禁用控制链接（通常是底部的小圆点或其他形式的缩略图），用于快速跳转到特定幻灯片。
+        controlLinkThumbs: false, //如果启用了 controlLinks，此选项决定是否显示缩略图作为控制链接。false 表示不显示缩略图。
+        controlThumbLocation: "", //如果启用了缩略图控制链接，此选项指定缩略图的位置。空字符串表示默认位置。如果你需要自定义缩略图的位置，可以在这里提供一个 CSS 类名或选择器。
+        autoPlay: false, //启用或禁用自动播放功能。true 表示启用，幻灯片会自动切换。
+        pauseTime: 8000, //设置自动播放时两张幻灯片之间的暂停时间（毫秒）。这里设置为 5000 毫秒，即 5 秒。
+        pauseOnHover: false, //当鼠标悬停在幻灯片上时，是否暂停自动播放。true 表示启用此功能。
+        captions: false, //启用或禁用幻灯片标题（字幕）。true 表示启用，幻灯片中的图片可以包含标题文本。
+        captionPosition: "bottom", //设置标题的位置。"bottom" 表示标题位于幻灯片的底部。其他可能的值包括 "top"、"left"、"right" 等。
+        captionAnimation: "slide", //设置标题的动画效果。"slide" 表示标题将以滑动的方式出现。其他可能的值包括 "fade"（淡入）等。
+        captionAnimationSpeed: 600, //设置标题动画的持续时间（毫秒）。这里设置为 600 毫秒，即 0.6 秒。
+        beforeSlideChange: function(a) {}, //定义在幻灯片切换前触发的回调函数。你可以在这个函数中执行一些自定义逻辑，比如加载数据或更新 UI。
+        afterSlideChange: function(a) {} //定义在幻灯片切换后触发的回调函数。同样可以用于执行自定义逻辑，比如更新状态或记录日志。
     }
 })(jQuery, document);
 
